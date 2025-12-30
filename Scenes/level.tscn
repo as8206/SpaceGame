@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dd44nlhfnu3tw"]
+[gd_scene load_steps=6 format=3 uid="uid://dd44nlhfnu3tw"]
 
 [ext_resource type="Script" uid="uid://dtpvsq1yr6iu7" path="res://Scenes/level.gd" id="1_81xng"]
 [ext_resource type="Texture2D" uid="uid://bvly4ut7bqv8q" path="res://Assets/Very Dark Purple.png" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://bye7asklm4cvr" path="res://Scenes/player.tscn" id="2_6phgx"]
-[ext_resource type="PackedScene" uid="uid://gmswns4fy6x5" path="res://Scenes/meteor.tscn" id="3_6phgx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
 size = Vector2(20, 750)
@@ -20,9 +19,6 @@ texture = ExtResource("1_k5f4k")
 
 [node name="Player" parent="." instance=ExtResource("2_6phgx")]
 position = Vector2(620, 273)
-
-[node name="Meteor" parent="." instance=ExtResource("3_6phgx")]
-position = Vector2(340, 251)
 
 [node name="Borders" type="Node2D" parent="."]
 
@@ -53,5 +49,7 @@ shape = SubResource("RectangleShape2D_81xng")
 
 [node name="MeteorTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="Meteors" type="Node2D" parent="."]
 
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
