@@ -2,13 +2,18 @@ extends CharacterBody2D
 
 @export var speed: int = 500
 
+var laserLeft: bool = true
+var canFire: bool = true
+
+signal fireLaser(pos)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	rotation_degrees += 180
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var direction = Input.get_vector("left","right","up","down")
 	velocity = direction * speed
 	move_and_slide()
@@ -25,3 +30,16 @@ func _process(delta: float) -> void:
 	#position += Vector2(1,1) * 25 * delta
 	#$PlayerShipSprite.position += Vector2(1,1) * 25 * delta
 	
+	#shoot input
+	if Input.is_action_pressed("Shoot") and canFire:
+		if laserLeft:
+			laserLeft = false
+			fireLaser.emit($LeftGunMarker.global_position)
+		else:
+			laserLeft = true
+			fireLaser.emit($RightGunMarker.global_position)
+		canFire = false
+		$LaserCooldownTimer.start()
+
+func _on_laser_cooldown_timer_timeout() -> void:
+	canFire = true

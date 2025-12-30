@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://5srnaeqnbf65" path="res://Assets/Sprites/Ships/spaceShips_008.png" id="1_v0iea"]
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 6
 script = ExtResource("1_cvnsp")
 
 [node name="PlayerShipSprite" type="Sprite2D" parent="."]
@@ -11,3 +12,15 @@ texture = ExtResource("1_v0iea")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(2, -31, 12, -34, 39, -22, 48, 33, 39, 40, 29, 15, 14, 14, 9, 32, -8, 32, -14, 15, -30, 15, -37, 41, -50, 33, -39, -21, -13, -35, -8, -31)
+
+[node name="LeftGunMarker" type="Marker2D" parent="."]
+position = Vector2(29, 38)
+
+[node name="RightGunMarker" type="Marker2D" parent="."]
+position = Vector2(-29, 38)
+
+[node name="LaserCooldownTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="timeout" from="LaserCooldownTimer" to="." method="_on_laser_cooldown_timer_timeout"]

@@ -23,18 +23,21 @@ position = Vector2(620, 273)
 [node name="Borders" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D"]
 position = Vector2(1290, 361)
 shape = SubResource("RectangleShape2D_6phgx")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2"]
 position = Vector2(-10, 366)
 shape = SubResource("RectangleShape2D_6phgx")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Borders"]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3"]
 position = Vector2(648.5, -5)
@@ -42,14 +45,19 @@ shape = SubResource("RectangleShape2D_81xng")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Borders"]
 position = Vector2(0, 736)
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4"]
 position = Vector2(646, -10)
 shape = SubResource("RectangleShape2D_81xng")
 
 [node name="MeteorTimer" type="Timer" parent="."]
+wait_time = 0.5
 autostart = true
 
 [node name="Meteors" type="Node2D" parent="."]
 
+[node name="Lasers" type="Node2D" parent="."]
+
+[connection signal="fireLaser" from="Player" to="." method="_on_player_fire_laser"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
