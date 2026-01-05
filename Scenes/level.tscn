@@ -1,8 +1,38 @@
-[gd_scene load_steps=6 format=3 uid="uid://dd44nlhfnu3tw"]
+[gd_scene load_steps=14 format=3 uid="uid://dd44nlhfnu3tw"]
 
 [ext_resource type="Script" uid="uid://dtpvsq1yr6iu7" path="res://Scenes/level.gd" id="1_81xng"]
 [ext_resource type="Texture2D" uid="uid://bvly4ut7bqv8q" path="res://Assets/Very Dark Purple.png" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://bye7asklm4cvr" path="res://Scenes/player.tscn" id="2_6phgx"]
+[ext_resource type="Texture2D" uid="uid://basg2360duyxr" path="res://Assets/AnimatedSprites/2dPixelArtStar/PixelArtStar_001.png" id="3_754fn"]
+[ext_resource type="Texture2D" uid="uid://rxadt1nns14h" path="res://Assets/AnimatedSprites/2dPixelArtStar/PixelArtStar_002.png" id="4_bvt00"]
+[ext_resource type="Texture2D" uid="uid://dcosgjrfuengp" path="res://Assets/AnimatedSprites/2dPixelArtStar/PixelArtStar_003.png" id="5_oqgf2"]
+[ext_resource type="Texture2D" uid="uid://e8ahaf5svvhq" path="res://Assets/AnimatedSprites/2dPixelArtStar/PixelArtStar_004.png" id="6_qxfql"]
+[ext_resource type="Texture2D" uid="uid://vu636p5gt4ub" path="res://Assets/AnimatedSprites/2dPixelArtStar/PixelArtStar_005.png" id="7_ha31o"]
+[ext_resource type="FontFile" uid="uid://djtcjk0c7ix03" path="res://Assets/Font/subatomic.tsoonami.ttf" id="9_bvt00"]
+[ext_resource type="Texture2D" uid="uid://ct68r15fpiybj" path="res://Assets/Sprites/Health/heart pixel art 32x32.png" id="10_oqgf2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pa6b8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_754fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bvt00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oqgf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qxfql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ha31o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
 size = Vector2(20, 750)
@@ -16,11 +46,226 @@ script = ExtResource("1_81xng")
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(646, 401)
 texture = ExtResource("1_k5f4k")
+metadata/_edit_lock_ = true
+
+[node name="Stars" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="StarAnimatedSprite2D" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D2" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D3" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D4" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D5" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D6" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D7" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D8" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D9" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D10" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D11" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D12" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D13" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D14" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D15" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D16" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D17" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D18" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D19" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D20" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D21" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D22" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D23" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D24" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D25" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D26" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D27" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D28" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D29" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
+
+[node name="StarAnimatedSprite2D30" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(41, 27)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pa6b8")
+autoplay = "default"
+frame_progress = 0.5861476
 
 [node name="Player" parent="." instance=ExtResource("2_6phgx")]
 position = Vector2(620, 273)
 
 [node name="Borders" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
 collision_layer = 4
@@ -56,8 +301,69 @@ wait_time = 0.5
 autostart = true
 
 [node name="Meteors" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="Lasers" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -178.5
+offset_right = 178.5
+offset_bottom = 44.0
+grow_horizontal = 2
+size_flags_horizontal = 8
+theme_override_constants/margin_top = 15
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_bvt00")
+theme_override_font_sizes/font_size = 50
+text = "Score: 1234"
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -32.0
+offset_right = 182.0
+grow_vertical = 0
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_bottom = 3
+
+[node name="HealthHBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer2"]
+layout_mode = 2
+
+[node name="HealthTextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer2/HealthHBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_oqgf2")
+stretch_mode = 2
+
+[node name="HealthTextureRect2" type="TextureRect" parent="CanvasLayer/MarginContainer2/HealthHBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_oqgf2")
+stretch_mode = 2
+
+[node name="HealthTextureRect3" type="TextureRect" parent="CanvasLayer/MarginContainer2/HealthHBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_oqgf2")
+stretch_mode = 2
+
+[node name="HealthTextureRect4" type="TextureRect" parent="CanvasLayer/MarginContainer2/HealthHBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_oqgf2")
+stretch_mode = 2
+
+[node name="HealthTextureRect5" type="TextureRect" parent="CanvasLayer/MarginContainer2/HealthHBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_oqgf2")
+stretch_mode = 2
 
 [connection signal="fireLaser" from="Player" to="." method="_on_player_fire_laser"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
